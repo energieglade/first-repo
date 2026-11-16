@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#193b72">
-  <meta name="description" content="Entdecke ausgewählte Vintage-Kleider und zeitlose Secondhand-Mode in allen Blautönen.">
-  <title>Nord & Neu Vintage – Kleidung mit Geschichte</title>
+  <meta name="description" content="Entdecke bereits getragene Vintage-Bekleidung und Schuhe – sorgfältig ausgewählte Einzelstücke mit Geschichte.">
+  <title>Nord & Neu Vintage – Lieblingsstücke von gestern für immer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -19,36 +19,37 @@
       --ink: #1c2a3d;
       --muted: #68788c;
       --line: #e1e8f0;
-      --white: #fff;
       --serif: "Playfair Display", Georgia, serif;
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { margin: 0; color: var(--ink); background: var(--white); font-family: "DM Sans", sans-serif; -webkit-font-smoothing: antialiased; }
-    button, input { font: inherit; }
-    button { cursor: pointer; }
+    body { margin: 0; color: var(--ink); background: white; font-family: "DM Sans", sans-serif; -webkit-font-smoothing: antialiased; }
+    button, input, select { font: inherit; }
+    button, a { cursor: pointer; }
     a { color: inherit; text-decoration: none; }
+    [hidden] { display: none !important; }
     .visually-hidden { width: 1px; height: 1px; padding: 0; position: absolute; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; clip-path: inset(50%); }
-    .announcement { padding: 9px 16px; color: white; background: var(--navy); text-align: center; font-size: 10px; letter-spacing: .035em; }
-    .announcement strong { font-weight: 700; }
-    .announcement a { margin-left: 5px; color: #d8e6f8; text-decoration: underline; text-underline-offset: 3px; }
     .site-header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.97); border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
-    .header-main { max-width: 1440px; height: 75px; padding: 0 5.2%; margin: auto; display: flex; align-items: center; gap: 38px; }
+    .header-main { max-width: 1440px; height: 75px; padding: 0 5.2%; margin: auto; display: flex; align-items: center; gap: 34px; }
     .logo { flex: 0 0 auto; color: var(--navy); font-family: var(--serif); font-size: 23px; font-weight: 700; letter-spacing: -.055em; }
-    .logo small { display: block; margin-top: -3px; color: var(--mid-blue); font-family: "DM Sans",sans-serif; font-size: 8px; font-weight: 700; letter-spacing: .24em; text-align: center; text-transform: uppercase; }
-    .desktop-nav { display: flex; align-items: center; gap: 25px; white-space: nowrap; }
-    .desktop-nav a { position: relative; padding: 29px 0 27px; color: #4a5b70; font-size: 11px; font-weight: 600; }
-    .desktop-nav a:hover, .desktop-nav a.active { color: var(--blue); }
-    .desktop-nav a.active:after { content: ""; height: 2px; position: absolute; right: 0; bottom: 20px; left: 0; background: var(--blue); }
-    .search { height: 38px; min-width: 110px; max-width: 330px; flex: 1; position: relative; }
+    .logo small { display: block; margin-top: -3px; color: var(--mid-blue); font-family: "DM Sans", sans-serif; font-size: 8px; font-weight: 700; letter-spacing: .24em; text-align: center; text-transform: uppercase; }
+    .desktop-nav { height: 100%; display: flex; align-items: center; gap: 23px; white-space: nowrap; }
+    .desktop-nav a { color: #4a5b70; font-size: 11px; font-weight: 600; }
+    .desktop-nav a:hover, .desktop-nav a:focus-visible { color: var(--blue); }
+    .nav-item { height: 100%; position: relative; display: flex; align-items: center; }
+    .nav-menu { min-width: 190px; padding: 9px 15px; position: absolute; top: 100%; left: -15px; z-index: 25; display: none; background: white; border: 1px solid var(--line); box-shadow: 0 12px 24px rgba(20,40,70,.1); }
+    .nav-menu a { padding: 10px 0; border-bottom: 1px solid #edf1f5; font-size: 10px; }
+    .nav-menu a:last-child { border-bottom: 0; }
+    .nav-item:hover .nav-menu, .nav-item:focus-within .nav-menu { display: grid; }
+    .search { height: 38px; min-width: 100px; max-width: 330px; flex: 1; position: relative; }
     .search svg { position: absolute; top: 10px; left: 12px; color: var(--muted); }
     .search input { width: 100%; height: 100%; padding: 0 12px 0 36px; border: 1px solid var(--line); border-radius: 3px; outline: none; background: #f8fafc; font-size: 10px; }
     .search input:focus { border-color: var(--mid-blue); box-shadow: 0 0 0 2px #e8eff7; }
-    .header-actions { display: flex; align-items: center; gap: 15px; }
+    .header-actions { display: flex; align-items: center; gap: 13px; }
     .icon-button { min-width: 29px; height: 38px; padding: 0; position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 5px; border: 0; color: var(--navy); background: transparent; }
     .icon-button span { color: #4a5b70; font-size: 10px; font-weight: 600; }
-    .bag-count { width: 16px; height: 16px; position: absolute; top: 0; right: -5px; display: grid; place-items: center; border-radius: 50%; color: #fff !important; background: var(--blue); font-size: 8px !important; }
+    .bag-count { width: 16px; height: 16px; position: absolute; top: 0; right: -5px; display: grid; place-items: center; border-radius: 50%; color: white !important; background: var(--blue); font-size: 8px !important; }
     .menu-toggle { display: none; }
     .hero-wrap { padding: 25px 5.2% 0; }
     .hero { max-width: 1440px; min-height: 430px; margin: auto; position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; background: var(--soft-blue); }
@@ -56,95 +57,73 @@
     .eyebrow { margin: 0 0 14px; color: var(--blue); font-size: 9px; font-weight: 700; letter-spacing: .19em; text-transform: uppercase; }
     .hero h1 { max-width: 450px; margin: 0; color: var(--navy); font-family: var(--serif); font-size: clamp(44px,5.3vw,72px); font-weight: 500; line-height: 1.02; letter-spacing: -.045em; }
     .hero-copy > p:not(.eyebrow) { max-width: 345px; margin: 19px 0 25px; color: #4f627a; font-size: 12px; line-height: 1.7; }
-    .button-primary { min-height: 43px; padding: 0 19px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 1px solid var(--navy); border-radius: 2px; color: #fff; background: var(--navy); font-size: 10px; font-weight: 700; transition: background .2s, transform .2s; }
+    .button-primary { min-height: 43px; padding: 0 19px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 1px solid var(--navy); border-radius: 2px; color: white; background: var(--navy); font-size: 10px; font-weight: 700; transition: background .2s, transform .2s; }
     .button-primary:hover { transform: translateY(-1px); background: var(--blue); }
     .hero-image { min-height: 430px; background: #b7c8dc url("https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1400&q=85") center 35% / cover no-repeat; }
     .hero-tag { position: absolute; right: 18px; bottom: 18px; padding: 9px 12px; color: var(--navy); background: rgba(255,255,255,.94); font-size: 8px; font-weight: 700; letter-spacing: .12em; }
-    .promise-row { max-width: 1440px; min-height: 66px; padding: 0 5.2%; margin: auto; display: flex; align-items: center; justify-content: center; gap: clamp(18px,5vw,70px); border-bottom: 1px solid var(--line); }
-    .promise { display: flex; align-items: center; gap: 8px; color: #4c5d72; font-size: 9px; }
-    .promise svg { color: var(--mid-blue); }
-    main { max-width: 1440px; padding: 0 5.2%; margin: auto; }
-    .section { padding: 54px 0 0; }
-    .section-heading { margin-bottom: 21px; display: flex; align-items: end; justify-content: space-between; gap: 16px; }
-    .section-heading h2 { margin: 0; color: var(--navy); font-family: var(--serif); font-size: 27px; font-weight: 500; letter-spacing: -.035em; }
-    .section-heading p { margin: 6px 0 0; color: var(--muted); font-size: 10px; }
-    .text-link { padding-bottom: 3px; color: var(--blue); font-size: 10px; font-weight: 700; border-bottom: 1px solid #9db1c9; }
-    .categories { display: grid; grid-template-columns: repeat(4,1fr); gap: 13px; }
-    .category { position: relative; aspect-ratio: 1 / 1.12; overflow: hidden; background: var(--ice); }
-    .category img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s; }
-    .category:hover img { transform: scale(1.04); }
-    .category:after { content: ""; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent,rgba(18,39,73,.55)); }
-    .category-title { position: absolute; z-index: 1; bottom: 16px; left: 16px; color: white; font-family: var(--serif); font-size: 19px; }
-    .category-title span { margin-left: 5px; font-family: "DM Sans",sans-serif; font-size: 13px; }
-    .shop-tools { margin: 0 0 19px; display: flex; align-items: center; justify-content: space-between; gap: 15px; }
-    .filter-list { display: flex; flex-wrap: wrap; gap: 7px; }
-    .filter-button { min-height: 30px; padding: 0 12px; border: 1px solid var(--line); border-radius: 2px; color: #53647a; background: #fff; font-size: 9px; transition: .18s; }
-    .filter-button:hover, .filter-button.active { border-color: var(--blue); color: #fff; background: var(--blue); }
+    .catalog-view { max-width: 1440px; min-height: calc(100vh - 75px); padding: 32px 5.2% 48px; margin: auto; }
+    .catalog-heading { padding: 20px 0 24px; }
+    .catalog-heading .eyebrow { margin-bottom: 8px; }
+    .catalog-heading h1 { margin: 0; color: var(--navy); font-family: var(--serif); font-size: clamp(32px,4vw,48px); font-weight: 500; letter-spacing: -.04em; }
+    .catalog-heading > p:last-child { max-width: 540px; margin: 9px 0 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
+    .catalog-links { margin: 0 0 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .catalog-links a { padding: 9px 13px; border: 1px solid var(--line); color: #53647a; font-size: 10px; }
+    .catalog-links a:hover, .catalog-links a.active { border-color: var(--blue); color: white; background: var(--blue); }
+    .shop-tools { min-height: 34px; margin: 0 0 17px; display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+    .shop-tools p { margin: 0; color: var(--muted); font-size: 10px; }
     .sort-select { height: 32px; padding: 0 25px 0 9px; border: 1px solid var(--line); border-radius: 2px; color: #53647a; background: white; font-size: 9px; }
-    .products { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; }
+    .products { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 25px 16px; }
     .product { min-width: 0; }
     .product-image { position: relative; aspect-ratio: 3 / 3.8; overflow: hidden; background: var(--ice); }
     .product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
     .product:hover .product-image img { transform: scale(1.035); }
     .badge { position: absolute; top: 10px; left: 10px; padding: 6px 8px; color: var(--navy); background: rgba(255,255,255,.94); font-size: 8px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
-    .favorite { width: 32px; height: 32px; position: absolute; top: 8px; right: 8px; display: grid; place-items: center; border: 0; border-radius: 50%; color: var(--navy); background: rgba(255,255,255,.95); }
-    .favorite.active { color: #a54164; }
+    .favorite { width: 34px; height: 34px; padding: 0; position: absolute; top: 9px; right: 9px; display: grid; place-items: center; border: 0; border-radius: 50%; color: var(--navy); background: rgba(255,255,255,.94); }
+    .favorite.active { color: #a63e55; }
+    .favorite.active svg { fill: currentColor; }
     .product-info { padding: 10px 1px 0; }
     .product-brand { margin: 0 0 4px; color: #334a68; font-size: 10px; font-weight: 700; }
     .product-name { min-height: 16px; margin: 0; overflow: hidden; color: #68778b; font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
-    .product-price { margin: 8px 0 0; color: var(--navy); font-size: 10px; font-weight: 700; }
+    .product-price { margin: 8px 0 9px; color: var(--navy); font-size: 10px; font-weight: 700; }
     .product-price del { margin-left: 6px; color: #929cac; font-size: 9px; font-weight: 400; }
-    .add-button { width: 100%; height: 34px; margin-top: 10px; border: 1px solid #cbd6e3; border-radius: 2px; color: var(--navy); background: #fff; font-size: 9px; font-weight: 700; transition: .2s; }
+    .sale-price { color: #a63e39; }
+    .add-button { width: 100%; height: 35px; border: 1px solid #cbd6e3; border-radius: 2px; color: var(--navy); background: white; font-size: 9px; font-weight: 700; transition: .18s; }
     .add-button:hover { border-color: var(--navy); color: white; background: var(--navy); }
-    .empty-state { grid-column: 1/-1; padding: 32px 0; color: var(--muted); font-size: 12px; text-align: center; }
-    .editorial { min-height: 250px; margin: 62px 0 6px; position: relative; overflow: hidden; display: grid; grid-template-columns: 1.05fr .95fr; color: white; background: var(--navy); }
-    .editorial-copy { align-self: center; padding: 35px 9%; position: relative; z-index: 1; }
-    .editorial .eyebrow { color: #bfd0e6; }
-    .editorial h2 { max-width: 480px; margin: 0; font-family: var(--serif); font-size: clamp(27px,3.8vw,43px); font-weight: 500; line-height: 1.1; }
-    .editorial p:not(.eyebrow) { margin: 12px 0 19px; color: #d3deec; font-size: 10px; line-height: 1.6; }
-    .button-light { min-height: 39px; padding: 0 15px; border: 1px solid white; border-radius: 2px; color: var(--navy); background: white; font-size: 9px; font-weight: 700; }
-    .button-light:hover { background: #eaf0f7; }
-    .editorial-image { min-height: 250px; background: #8197b2 url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=80") center 39% / cover no-repeat; }
-    .newsletter { padding: 45px 18px 49px; margin-top: 53px; text-align: center; background: var(--ice); }
-    .newsletter h2 { margin: 0; color: var(--navy); font-family: var(--serif); font-size: 24px; font-weight: 500; }
-    .newsletter p { margin: 8px 0 17px; color: var(--muted); font-size: 10px; }
-    .newsletter-form { max-width: 390px; margin: auto; display: flex; }
-    .newsletter-form input { width: 100%; min-width: 0; height: 40px; padding: 0 12px; border: 1px solid #cdd8e5; border-right: 0; outline: none; font-size: 10px; }
-    .newsletter-form input:focus { border-color: var(--blue); }
-    .newsletter-form button { padding: 0 16px; border: 0; color: white; background: var(--navy); font-size: 9px; font-weight: 700; }
+    .empty-state { padding: 32px 0; color: var(--muted); font-size: 12px; text-align: center; }
     .site-footer { margin-top: 48px; border-top: 1px solid var(--line); }
     .footer-main { max-width: 1440px; margin: auto; padding: 36px 5.2%; display: grid; grid-template-columns: 1.5fr repeat(3,1fr); gap: 28px; }
     .footer-brand p { max-width: 230px; color: var(--muted); font-size: 9px; line-height: 1.7; }
-    .footer-column h3 { margin: 0 0 12px; color: var(--navy); font-size: 10px; }
+    .footer-column h2 { margin: 0 0 12px; color: var(--navy); font-size: 10px; }
     .footer-column a { display: block; width: fit-content; margin: 8px 0; color: var(--muted); font-size: 9px; }
     .footer-column a:hover { color: var(--blue); }
     .footer-bottom { padding: 13px 5.2%; border-top: 1px solid var(--line); color: var(--muted); font-size: 8px; }
     .toast { position: fixed; right: 20px; bottom: 20px; z-index: 30; padding: 12px 16px; color: white; background: var(--navy); font-size: 10px; opacity: 0; transform: translateY(9px); pointer-events: none; transition: .22s; }
     .toast.show { opacity: 1; transform: translateY(0); }
-    @media (max-width: 980px) {
+    @media (max-width: 1050px) {
       .header-main { gap: 20px; padding: 0 4%; }
-      .desktop-nav { gap: 15px; }
-      .desktop-nav a { font-size: 10px; }
-      .header-actions { gap: 9px; }
+      .desktop-nav { gap: 13px; }
+      .desktop-nav > a, .nav-item > a { font-size: 10px; }
+      .header-actions { gap: 8px; }
       .icon-button span { display: none; }
-      .hero-wrap, main { padding-left: 4%; padding-right: 4%; }
-      .promise-row { padding: 0 4%; }
+      .hero-wrap { padding-right: 4%; padding-left: 4%; }
+      .catalog-view { padding-right: 4%; padding-left: 4%; }
       .footer-main { padding-right: 4%; padding-left: 4%; }
     }
-    @media (max-width: 700px) {
-      .announcement { padding: 8px 7px; font-size: 9px; }
-      .header-main { height: 62px; padding: 0 14px; gap: 11px; }
+    @media (max-width: 760px) {
+      .header-main { height: 62px; padding: 0 14px; gap: 10px; }
       .menu-toggle { width: 28px; height: 34px; display: inline-flex; flex: 0 0 auto; }
       .logo { font-size: 19px; }
       .logo small { font-size: 7px; }
-      .desktop-nav { display: none; position: absolute; top: 62px; left: 0; right: 0; padding: 12px 20px 18px; background: white; border-bottom: 1px solid var(--line); box-shadow: 0 10px 18px rgba(20,40,70,.07); }
-      .desktop-nav.open { display: grid; gap: 0; }
-      .desktop-nav a { padding: 12px 0; border-bottom: 1px solid #edf1f5; font-size: 12px; }
-      .desktop-nav a.active:after { display: none; }
+      .desktop-nav { height: auto; padding: 12px 20px 18px; position: absolute; top: 62px; left: 0; right: 0; display: none; background: white; border-bottom: 1px solid var(--line); box-shadow: 0 10px 18px rgba(20,40,70,.07); }
+      .desktop-nav.open { display: block; }
+      .desktop-nav > a, .nav-item > a { padding: 12px 0; display: block; border-bottom: 1px solid #edf1f5; font-size: 12px; }
+      .nav-item { height: auto; display: block; }
+      .nav-menu { min-width: 0; padding: 0 0 5px 13px; position: static; display: grid; border: 0; box-shadow: none; }
+      .nav-menu a { padding: 9px 0; font-size: 11px; }
       .search { height: 34px; }
       .search input { padding-left: 31px; font-size: 9px; }
       .search svg { left: 9px; top: 9px; width: 16px; }
-      .header-actions { gap: 7px; }
+      .header-actions { gap: 5px; }
       .header-actions .account { display: none; }
       .icon-button svg { width: 19px; }
       .hero-wrap { padding: 13px 13px 0; }
@@ -154,36 +133,17 @@
       .hero-copy > p:not(.eyebrow) { margin: 12px 0 17px; font-size: 10px; }
       .hero-image { min-height: 240px; background-position: center 36%; }
       .hero-tag { right: 9px; bottom: 9px; padding: 7px 9px; font-size: 7px; }
-      .promise-row { min-height: 68px; padding: 13px 15px; justify-content: flex-start; gap: 10px 16px; flex-wrap: wrap; }
-      .promise { gap: 5px; font-size: 8px; }
-      .promise svg { width: 15px; }
-      main { padding: 0 14px; }
-      .section { padding-top: 40px; }
-      .section-heading { margin-bottom: 15px; }
-      .section-heading h2 { font-size: 23px; }
-      .section-heading p { font-size: 9px; }
-      .text-link { font-size: 9px; white-space: nowrap; }
-      .categories { grid-template-columns: repeat(2,1fr); gap: 8px; }
-      .category-title { bottom: 11px; left: 11px; font-size: 16px; }
-      .shop-tools { align-items: flex-start; flex-direction: column; gap: 10px; }
-      .filter-list { gap: 6px; }
-      .filter-button { min-height: 28px; padding: 0 9px; font-size: 8px; }
-      .sort-select { align-self: flex-end; height: 29px; }
+      .catalog-view { min-height: calc(100vh - 62px); padding: 20px 14px 35px; }
+      .catalog-heading { padding: 12px 0 19px; }
+      .shop-tools { align-items: flex-start; }
       .products { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px 9px; }
       .badge { top: 7px; left: 7px; padding: 5px 6px; font-size: 7px; }
       .favorite { width: 29px; height: 29px; top: 6px; right: 6px; }
-      .favorite svg { width: 17px; }
       .product-info { padding-top: 8px; }
       .product-brand { font-size: 9px; }
       .product-name { font-size: 8px; }
       .product-price { font-size: 9px; }
       .add-button { height: 32px; font-size: 8px; }
-      .editorial { min-height: auto; margin: 43px 0 0; grid-template-columns: 1fr; }
-      .editorial-copy { padding: 27px 21px 23px; }
-      .editorial h2 { font-size: 31px; }
-      .editorial-image { min-height: 195px; }
-      .newsletter { margin-top: 36px; padding: 36px 15px; }
-      .newsletter h2 { font-size: 21px; }
       .footer-main { padding: 30px 17px; grid-template-columns: repeat(2,1fr); gap: 21px 12px; }
       .footer-brand { grid-column: 1/-1; }
       .footer-bottom { padding-left: 17px; }
@@ -194,17 +154,19 @@
   </style>
 </head>
 <body>
-  <div class="announcement"><strong>Vintage mit Geschichte</strong> · Versandkostenfrei ab 59 € <a href="#service">Unser Versprechen</a></div>
   <header class="site-header">
     <div class="header-main">
       <button class="icon-button menu-toggle" id="menu-toggle" aria-label="Menü öffnen" aria-expanded="false"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
       <a class="logo" href="#start" aria-label="Nord und Neu Vintage Startseite">Nord & Neu<small>Vintage Kleidung</small></a>
       <nav class="desktop-nav" aria-label="Hauptnavigation">
-        <a class="active" href="#neu">Neu entdeckt</a><a href="#produkte" data-filter-link="kleider">Kleider</a><a href="#produkte" data-filter-link="blusen">Blusen</a><a href="#produkte" data-filter-link="röcke">Röcke</a><a href="#geschichte">Unsere Auswahl</a>
+        <a href="#start">Startseite</a>
+        <div class="nav-item"><a href="#bekleidung">Bekleidung</a><div class="nav-menu"><a href="#bekleidung">Alles entdecken</a><a href="#bekleidung/jeans">Jeans</a><a href="#bekleidung/jacken">Jacken</a><a href="#bekleidung/tshirt">T-Shirts</a><a href="#bekleidung/pullover">Pullover</a></div></div>
+        <div class="nav-item"><a href="#schuhe">Schuhe</a><div class="nav-menu"><a href="#schuhe">Alle Schuhe entdecken</a><a href="#schuhe/sneaker">Sneaker</a><a href="#schuhe/stiefel">Stiefel</a><a href="#schuhe/sportschuhe">Sportschuhe</a></div></div>
+        <div class="nav-item"><a href="#sale">Sale</a><div class="nav-menu"><a href="#sale">Alles im Sale</a><a href="#sale/bekleidung">Bekleidung</a><a href="#sale/schuhe">Schuhe</a></div></div>
       </nav>
       <label class="search">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
-        <input id="search-input" type="search" placeholder="Vintage-Kleidung suchen" aria-label="Vintage-Kleidung suchen">
+        <input id="search-input" type="search" placeholder="Vintage suchen" aria-label="Vintage-Produkte suchen">
       </label>
       <div class="header-actions">
         <button class="icon-button account" aria-label="Mein Konto"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c.5-4 3.1-6 7.5-6s7 2 7.5 6"/></svg><span>Konto</span></button>
@@ -216,97 +178,69 @@
 
   <div class="hero-wrap" id="start">
     <section class="hero" aria-label="Vintage-Kleidung entdecken">
-      <div class="hero-copy"><p class="eyebrow">Einzelstücke mit Vergangenheit</p><h1>Lieblingsstücke. Von gestern für immer.</h1><p>Sorgfältig ausgewählte Vintage-Kleidung, die schon eine Geschichte hat – und bald deine weiterschreibt.</p><a class="button-primary" href="#produkte">Vintage entdecken <span aria-hidden="true">→</span></a></div>
-      <div class="hero-image" role="img" aria-label="Ausgewählter Vintage-Look mit Kleidungsstücken in Blau"></div>
-      <div class="hero-tag">VINTAGE · EINZELSTÜCKE · MIT LIEBE GEWÄHLT</div>
+      <div class="hero-copy"><p class="eyebrow">Getragen. Geliebt. Weitergegeben.</p><h1>Lieblingsstücke. Von gestern für immer.</h1><p>Entdecke besondere Vintage-Kleidung und Schuhe, die schon eine Geschichte haben – und bald deine weiterschreiben.</p><a class="button-primary" href="#bekleidung">Vintage entdecken <span aria-hidden="true">→</span></a></div>
+      <div class="hero-image" role="img" aria-label="Ausgewählter Vintage-Look mit Kleidungsstücken"></div>
+      <div class="hero-tag">VINTAGE · SECONDHAND · EINZELSTÜCKE</div>
     </section>
   </div>
 
-  <section class="promise-row" id="service" aria-label="Unser Versprechen">
-    <div class="promise"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h11v11H3zM14 11h4l3 3v4h-7z"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="17.5" cy="19" r="1.5"/></svg> Versand ab 59 € gratis</div>
-    <div class="promise"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12a8 8 0 1 0 2.4-5.7L4 8.5"/><path d="M4 4v4.5h4.5M12 7v5l3 2"/></svg> 30 Tage Rückgabe</div>
-    <div class="promise"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 4 6v5c0 5 3.4 8.2 8 10 4.6-1.8 8-5 8-10V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg> Jedes Stück geprüft</div>
-    <div class="promise"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h16v12H8l-4 3V5Z"/><path d="M8 9h8M8 13h5"/></svg> Mit persönlicher Sorgfalt</div>
-  </section>
-
-  <main>
-    <section class="section" id="neu">
-      <div class="section-heading"><div><h2>Finde dein neues altes Lieblingsstück</h2><p>Einzigartige Kleidung statt Massenware.</p></div><a class="text-link" href="#produkte">Alle Stücke ansehen</a></div>
-      <div class="categories">
-        <a class="category" href="#produkte" data-category="kleider"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=700&q=80" alt="Vintage-Kleid in fließendem Schnitt"><span class="category-title">Kleider <span aria-hidden="true">↗</span></span></a>
-        <a class="category" href="#produkte" data-category="blusen"><img src="https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&fit=crop&w=700&q=80" alt="Vintage-Bluse in sanftem Blauton"><span class="category-title">Blusen <span aria-hidden="true">↗</span></span></a>
-        <a class="category" href="#produkte" data-category="röcke"><img src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?auto=format&fit=crop&w=700&q=80" alt="Vintage-Rock als Teil eines Outfits"><span class="category-title">Röcke <span aria-hidden="true">↗</span></span></a>
-        <a class="category" href="#produkte" data-category="jacken"><img src="https://images.unsplash.com/photo-1548126032-079a0fb0099d?auto=format&fit=crop&w=700&q=80" alt="Vintage-Jacke aus Denim"><span class="category-title">Jacken <span aria-hidden="true">↗</span></span></a>
-      </div>
-    </section>
-
-    <section class="section" id="produkte">
-      <div class="section-heading"><div><h2>Neu im Kleiderschrank</h2><p>Jedes Teil ein Original – nur einmal verfügbar.</p></div><a class="text-link" href="#produkte" data-clear-filter>Alle Neuheiten</a></div>
+  <main class="catalog-view" id="catalog-view" hidden>
+    <header class="catalog-heading">
+      <p class="eyebrow" id="catalog-eyebrow">Vintage · Secondhand · Einzelstücke</p>
+      <h1 id="catalog-title">Bekleidung</h1>
+      <p id="catalog-description">Bereits getragene Lieblingsstücke mit Charakter – sorgfältig ausgewählt und bereit für ein neues Zuhause.</p>
+    </header>
+    <nav class="catalog-links" id="catalog-links" aria-label="Kategorien"></nav>
+    <section id="produkte" aria-label="Vintage-Produkte">
       <div class="shop-tools">
-        <div class="filter-list" role="group" aria-label="Kleidung nach Kategorie filtern">
-          <button class="filter-button active" data-filter="alle" aria-pressed="true">Alle Stücke</button>
-          <button class="filter-button" data-filter="kleider" aria-pressed="false">Kleider</button>
-          <button class="filter-button" data-filter="blusen" aria-pressed="false">Blusen</button>
-          <button class="filter-button" data-filter="röcke" aria-pressed="false">Röcke</button>
-          <button class="filter-button" data-filter="jacken" aria-pressed="false">Jacken</button>
-        </div>
+        <p id="product-count" aria-live="polite"></p>
         <label><span class="visually-hidden">Sortierung</span><select class="sort-select" id="sort-select" aria-label="Produkte sortieren"><option value="featured">Sortierung: Unsere Auswahl</option><option value="price-low">Preis aufsteigend</option><option value="price-high">Preis absteigend</option></select></label>
       </div>
       <div class="products" id="product-list">
-        <article class="product" data-category="kleider" data-price="64.90" data-search="kleid blumenprint midi vintage damen blau">
-          <div class="product-image"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=700&q=80" alt="Blaues Vintage-Midikleid mit Blumenprint"><span class="badge">Einzelstück</span><button class="favorite" aria-label="Midikleid merken" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.8c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/></svg></button></div>
-          <div class="product-info"><p class="product-brand">Vintage Selection</p><p class="product-name">Midikleid mit kleinem Blumenprint</p><p class="product-price">64,90 €</p><button class="add-button">In den Warenkorb</button></div>
+        <article class="product" data-category="jeans" data-group="bekleidung" data-sale="true" data-price="39.90" data-search="jeans denim vintage secondhand gebraucht">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=700&q=80" alt="Getragene Vintage-Jeans aus Denim"><span class="badge">Secondhand · Sale</span><button class="favorite" aria-label="Vintage-Jeans merken" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.8c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/></svg></button></div>
+          <div class="product-info"><p class="product-brand">Vintage Fund · geprüft</p><p class="product-name">Jeans mit geradem Bein</p><p class="product-price sale-price">39,90 € <del>54,90 €</del></p><button class="add-button">In den Warenkorb</button></div>
         </article>
-        <article class="product" data-category="blusen" data-price="42.50" data-search="bluse vintage baumwolle hellblau damen">
-          <div class="product-image"><img src="https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&fit=crop&w=700&q=80" alt="Hellblaue Vintage-Bluse aus Baumwolle"><span class="badge">Vintage · 90er</span><button class="favorite" aria-label="Vintage-Bluse merken" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.8c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/></svg></button></div>
-          <div class="product-info"><p class="product-brand">Second Story</p><p class="product-name">Baumwollbluse mit feinem Kragen</p><p class="product-price">42,50 €</p><button class="add-button">In den Warenkorb</button></div>
+        <article class="product" data-category="jacken" data-group="bekleidung" data-sale="false" data-price="64.90" data-search="jacke jeansjacke denim vintage secondhand gebraucht">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1548126032-079a0fb0099d?auto=format&fit=crop&w=700&q=80" alt="Gebrauchte Vintage-Jeansjacke"><span class="badge">Secondhand · Einzelstück</span><button class="favorite" aria-label="Vintage-Jacke merken" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.8c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/></svg></button></div>
+          <div class="product-info"><p class="product-brand">Vintage Fund · geprüft</p><p class="product-name">Jeansjacke im lässigen Schnitt</p><p class="product-price">64,90 €</p><button class="add-button">In den Warenkorb</button></div>
         </article>
-        <article class="product" data-category="röcke" data-price="49.00" data-search="rock vintage jeans denim blau midi damen">
-          <div class="product-image"><img src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?auto=format&fit=crop&w=700&q=80" alt="Vintage-Rock in dunklem Denimblau"><span class="badge">Lieblingsfund</span><button class="favorite" aria-label="Denimrock merken" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.8c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/></svg></button></div>
-          <div class="product-info"><p class="product-brand">Nord & Neu Archive</p><p class="product-name">A-Linien-Rock aus Denim</p><p class="product-price">49,00 €</p><button class="add-button">In den Warenkorb</button></div>
+        <article class="product" data-category="tshirt" data-group="bekleidung" data-sale="false" data-price="24.90" data-search="t-shirt tshirt vintage secondhand gebraucht">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80" alt="Gebrauchtes Vintage-T-Shirt"><span class="badge">Secondhand · Einzelstück</span><button class="favorite" aria-label="Vintage-T-Shirt merken" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.8c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/></svg></button></div>
+          <div class="product-info"><p class="product-brand">Vintage Fund · geprüft</p><p class="product-name">Klassisches T-Shirt aus Baumwolle</p><p class="product-price">24,90 €</p><button class="add-button">In den Warenkorb</button></div>
         </article>
-        <article class="product" data-category="jacken" data-price="89.90" data-search="jacke denim jeans vintage oversize blau damen">
-          <div class="product-image"><img src="https://images.unsplash.com/photo-1548126032-079a0fb0099d?auto=format&fit=crop&w=700&q=80" alt="Vintage-Jeansjacke in klassischem Blau"><span class="badge">Einzelstück</span><button class="favorite" aria-label="Jeansjacke merken" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.8c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/></svg></button></div>
-          <div class="product-info"><p class="product-brand">Vintage Selection</p><p class="product-name">Jeansjacke im lässigen Schnitt</p><p class="product-price">89,90 €</p><button class="add-button">In den Warenkorb</button></div>
+        <article class="product" data-category="pullover" data-group="bekleidung" data-sale="true" data-price="34.90" data-search="pullover strick vintage secondhand gebraucht">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=700&q=80" alt="Getragener Vintage-Strickpullover"><span class="badge">Secondhand · Sale</span><button class="favorite" aria-label="Vintage-Pullover merken" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.8c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/></svg></button></div>
+          <div class="product-info"><p class="product-brand">Vintage Fund · geprüft</p><p class="product-name">Weicher Strickpullover</p><p class="product-price sale-price">34,90 € <del>45,90 €</del></p><button class="add-button">In den Warenkorb</button></div>
         </article>
-        <article class="product" data-category="kleider" data-price="72.00" data-search="kleid vintage dunkelblau samt langarm damen">
-          <div class="product-image"><img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=700&q=80" alt="Dunkelblaues Vintage-Kleid mit klassischer Silhouette"><span class="badge">Vintage · 80er</span><button class="favorite" aria-label="Dunkelblaues Kleid merken" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.8c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/></svg></button></div>
-          <div class="product-info"><p class="product-brand">Second Story</p><p class="product-name">Klassisches Kleid in Nachtblau</p><p class="product-price">72,00 €</p><button class="add-button">In den Warenkorb</button></div>
+        <article class="product" data-category="sneaker" data-group="schuhe" data-sale="false" data-price="49.90" data-search="sneaker schuhe vintage secondhand gebraucht">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80" alt="Gebrauchte Vintage-Sneaker"><span class="badge">Secondhand · Einzelstück</span><button class="favorite" aria-label="Vintage-Sneaker merken" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.8c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/></svg></button></div>
+          <div class="product-info"><p class="product-brand">Vintage Fund · geprüft</p><p class="product-name">Retro-Sneaker in Rot</p><p class="product-price">49,90 €</p><button class="add-button">In den Warenkorb</button></div>
         </article>
-        <article class="product" data-category="blusen" data-price="38.90" data-search="bluse vintage gestreift blau weiß damen">
-          <div class="product-image"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=80" alt="Vintage-Bluse mit blauen Streifen"><span class="badge">Vintage · 90er</span><button class="favorite" aria-label="Gestreifte Bluse merken" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.8c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/></svg></button></div>
-          <div class="product-info"><p class="product-brand">Nord & Neu Archive</p><p class="product-name">Gestreifte Bluse mit Brusttasche</p><p class="product-price">38,90 €</p><button class="add-button">In den Warenkorb</button></div>
+        <article class="product" data-category="stiefel" data-group="schuhe" data-sale="true" data-price="54.90" data-search="stiefel schuhe boots vintage secondhand gebraucht">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=700&q=80" alt="Gebrauchte Vintage-Stiefel"><span class="badge">Secondhand · Sale</span><button class="favorite" aria-label="Vintage-Stiefel merken" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.8c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/></svg></button></div>
+          <div class="product-info"><p class="product-brand">Vintage Fund · geprüft</p><p class="product-name">Lederstiefel mit Charakter</p><p class="product-price sale-price">54,90 € <del>69,90 €</del></p><button class="add-button">In den Warenkorb</button></div>
         </article>
-        <article class="product" data-category="röcke" data-price="45.00" data-search="rock vintage plissee plissee blau damen">
-          <div class="product-image"><img src="https://images.unsplash.com/photo-1582142306909-195724d33ffc?auto=format&fit=crop&w=700&q=80" alt="Vintage-Plisseerock in kühlem Blauton"><span class="badge">Einzelstück</span><button class="favorite" aria-label="Plisseerock merken" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.8c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/></svg></button></div>
-          <div class="product-info"><p class="product-brand">Vintage Selection</p><p class="product-name">Plisseerock in sanftem Taubenblau</p><p class="product-price">45,00 €</p><button class="add-button">In den Warenkorb</button></div>
+        <article class="product" data-category="sportschuhe" data-group="schuhe" data-sale="false" data-price="39.90" data-search="sportschuhe schuhe sneaker vintage secondhand gebraucht">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=700&q=80" alt="Gebrauchte Vintage-Sportschuhe"><span class="badge">Secondhand · Einzelstück</span><button class="favorite" aria-label="Vintage-Sportschuhe merken" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.8c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/></svg></button></div>
+          <div class="product-info"><p class="product-brand">Vintage Fund · geprüft</p><p class="product-name">Klassische Sportschuhe</p><p class="product-price">39,90 €</p><button class="add-button">In den Warenkorb</button></div>
         </article>
-        <article class="product" data-category="kleider" data-price="58.00" data-search="kleid vintage jeans denim blau damen">
-          <div class="product-image"><img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=700&q=80" alt="Vintage-Jeanskleid mit zeitlosem Schnitt"><span class="badge">Lieblingsfund</span><button class="favorite" aria-label="Jeanskleid merken" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.8c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/></svg></button></div>
-          <div class="product-info"><p class="product-brand">Second Story</p><p class="product-name">Jeanskleid mit Knopfleiste</p><p class="product-price">58,00 €</p><button class="add-button">In den Warenkorb</button></div>
+        <article class="product" data-category="jeans" data-group="bekleidung" data-sale="true" data-price="44.90" data-search="jeans denim blau vintage secondhand gebraucht">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1475178626620-a4d074967452?auto=format&fit=crop&w=700&q=80" alt="Gebrauchte blaue Vintage-Jeans"><span class="badge">Secondhand · Sale</span><button class="favorite" aria-label="Blaue Vintage-Jeans merken" aria-pressed="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.8 8.8c0 5.2-8.8 10-8.8 10s-8.8-4.8-8.8-10a4.5 4.5 0 0 1 8.8-1.3 4.5 4.5 0 0 1 8.8 1.3Z"/></svg></button></div>
+          <div class="product-info"><p class="product-brand">Vintage Fund · geprüft</p><p class="product-name">Vintage-Jeans in Blue Denim</p><p class="product-price sale-price">44,90 € <del>59,90 €</del></p><button class="add-button">In den Warenkorb</button></div>
         </article>
-        <p class="empty-state" id="empty-state" hidden>Zu deiner Suche haben wir gerade kein passendes Vintage-Kleidungsstück gefunden.</p>
       </div>
-    </section>
-
-    <section class="editorial" id="geschichte">
-      <div class="editorial-copy"><p class="eyebrow">Weniger neu. Mehr besonders.</p><h2>Gut getragen. Neu geliebt.</h2><p>Wir wählen jedes Kleidungsstück einzeln aus – für Qualität, Charakter und einen Stil, der nicht aus der Mode kommt.</p><a class="button-light" href="#produkte">Unsere Vintage-Auswahl entdecken →</a></div>
-      <div class="editorial-image" role="img" aria-label="Ausgewählte Kleidung aus der Vintage-Kollektion"></div>
-    </section>
-
-    <section class="newsletter">
-      <h2>Post aus unserem Kleiderschrank</h2><p>Neue Vintage-Funde zuerst entdecken – direkt in deinem Postfach.</p>
-      <form class="newsletter-form" id="newsletter-form"><input id="email" type="email" placeholder="Deine E-Mail-Adresse" aria-label="Deine E-Mail-Adresse" required><button type="submit">Anmelden</button></form>
+      <p class="empty-state" id="empty-state" hidden>Hier gibt es gerade keine passenden Vintage-Einzelstücke.</p>
     </section>
   </main>
-  <footer class="site-footer">
+  <footer class="site-footer" id="site-footer">
     <div class="footer-main">
-      <div class="footer-brand"><a class="logo" href="#start">Nord & Neu<small>Vintage Kleidung</small></a><p>Ausgewählte Vintage-Kleidung mit Charakter. Jedes Stück verdient eine zweite Geschichte.</p></div>
-      <div class="footer-column"><h3>Dein Einkauf</h3><a href="#service">Versand & Rückgabe</a><a href="#service">Größenberatung</a><a href="#service">Häufige Fragen</a></div>
-      <div class="footer-column"><h3>Unsere Auswahl</h3><a href="#produkte" data-filter-link="kleider">Kleider</a><a href="#produkte" data-filter-link="blusen">Blusen</a><a href="#produkte" data-filter-link="röcke">Röcke & Jacken</a></div>
-      <div class="footer-column"><h3>Über Nord & Neu</h3><a href="#geschichte">Unsere Geschichte</a><a href="#geschichte">Vintage statt neu</a><a href="mailto:hallo@nordundneu.example">Kontakt</a></div>
+      <div class="footer-brand"><a class="logo" href="#start">Nord & Neu<small>Vintage Kleidung</small></a><p>Bereits getragene Vintage-Funde mit Charakter. Jedes Stück verdient eine zweite Geschichte.</p></div>
+      <div class="footer-column"><h2>Bekleidung</h2><a href="#bekleidung">Alles entdecken</a><a href="#bekleidung/jeans">Jeans</a><a href="#bekleidung/jacken">Jacken</a><a href="#bekleidung/tshirt">T-Shirts</a><a href="#bekleidung/pullover">Pullover</a></div>
+      <div class="footer-column"><h2>Schuhe & Sale</h2><a href="#schuhe">Alle Schuhe</a><a href="#schuhe/sneaker">Sneaker</a><a href="#sale">Alles im Sale</a><a href="#sale/bekleidung">Sale Bekleidung</a><a href="#sale/schuhe">Sale Schuhe</a></div>
+      <div class="footer-column"><h2>Über Nord & Neu</h2><a href="mailto:hallo@nordundneu.example">Kontakt</a><a href="#start">Vintage statt neu</a></div>
     </div>
-    <div class="footer-bottom">© 2026 Nord & Neu Vintage · Kleidung mit Geschichte</div>
+    <div class="footer-bottom">© 2026 Nord & Neu Vintage · Bereits getragen, neu geliebt</div>
   </footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script>
@@ -315,10 +249,85 @@
     const productList = document.getElementById("product-list");
     const products = [...document.querySelectorAll(".product")];
     const emptyState = document.getElementById("empty-state");
-    const filterButtons = [...document.querySelectorAll(".filter-button")];
+    const hero = document.querySelector(".hero-wrap");
+    const catalog = document.getElementById("catalog-view");
+    const catalogTitle = document.getElementById("catalog-title");
+    const catalogDescription = document.getElementById("catalog-description");
+    const catalogLinks = document.getElementById("catalog-links");
+    const productCount = document.getElementById("product-count");
+    const searchInput = document.getElementById("search-input");
+    const siteFooter = document.getElementById("site-footer");
     let itemCount = 0;
-    let activeCategory = "alle";
+    let activeCategory = "";
+    let activeGroup = "";
+    let saleOnly = false;
     let toastTimer;
+
+    const categories = {
+      bekleidung: [
+        ["Alles entdecken", "#bekleidung", ""],
+        ["Jeans", "#bekleidung/jeans", "jeans"],
+        ["Jacken", "#bekleidung/jacken", "jacken"],
+        ["T-Shirts", "#bekleidung/tshirt", "tshirt"],
+        ["Pullover", "#bekleidung/pullover", "pullover"]
+      ],
+      schuhe: [
+        ["Alle Schuhe entdecken", "#schuhe", ""],
+        ["Sneaker", "#schuhe/sneaker", "sneaker"],
+        ["Stiefel", "#schuhe/stiefel", "stiefel"],
+        ["Sportschuhe", "#schuhe/sportschuhe", "sportschuhe"]
+      ],
+      sale: [
+        ["Alles im Sale", "#sale", ""],
+        ["Bekleidung", "#sale/bekleidung", "bekleidung"],
+        ["Schuhe", "#sale/schuhe", "schuhe"]
+      ]
+    };
+
+    function renderCatalogLinks(section) {
+      const links = section === "sale" ? categories.sale : categories[section];
+      catalogLinks.replaceChildren(...links.map(([label, href, category]) => {
+        const link = document.createElement("a");
+        link.href = href;
+        link.textContent = label;
+        const selected = section === "sale"
+          ? category === activeGroup && Boolean(category)
+          : category === activeCategory;
+        link.classList.toggle("active", selected);
+        return link;
+      }));
+    }
+
+    function updatePage() {
+      const [section = "start", subsection = ""] = decodeURIComponent(location.hash.slice(1)).split("/");
+      const isHome = section === "start" || !section;
+      hero.hidden = !isHome;
+      catalog.hidden = isHome;
+      siteFooter.hidden = isHome;
+      if (isHome) return;
+
+      activeCategory = "";
+      activeGroup = "";
+      saleOnly = section === "sale";
+      if (section === "bekleidung" || section === "schuhe") {
+        activeCategory = subsection;
+        activeGroup = section;
+        const match = categories[section].find((item) => item[2] === subsection);
+        catalogTitle.textContent = subsection ? match?.[0] || (section === "schuhe" ? "Schuhe" : "Bekleidung") : section === "schuhe" ? "Schuhe" : "Bekleidung";
+        catalogDescription.textContent = "Bereits getragene Lieblingsstücke mit Charakter – sorgfältig ausgewählt und bereit für ein neues Zuhause.";
+      } else if (section === "sale") {
+        activeGroup = subsection;
+        catalogTitle.textContent = subsection === "bekleidung" ? "Sale · Bekleidung" : subsection === "schuhe" ? "Sale · Schuhe" : "Vintage Sale";
+        catalogDescription.textContent = "Entdecke reduzierte Secondhand-Funde. Jedes Stück ist bereits getragen, sorgfältig geprüft und nur einmal verfügbar.";
+      } else {
+        location.hash = "start";
+        return;
+      }
+
+      document.getElementById("catalog-eyebrow").textContent = saleOnly ? "Vintage · Secondhand · reduziert" : "Vintage · Secondhand · Einzelstücke";
+      renderCatalogLinks(section);
+      filterProducts();
+    }
 
     function showToast(message) {
       toast.textContent = message;
@@ -328,56 +337,29 @@
     }
 
     function filterProducts() {
-      const query = document.getElementById("search-input").value.trim().toLocaleLowerCase("de");
+      const query = searchInput.value.trim().toLocaleLowerCase("de");
       let visibleCount = 0;
       products.forEach((product) => {
-        const matchesCategory = activeCategory === "alle" || product.dataset.category === activeCategory;
+        const matchesCategory = !activeCategory || product.dataset.category === activeCategory;
+        const matchesGroup = !activeGroup || product.dataset.group === activeGroup;
+        const matchesSale = !saleOnly || product.dataset.sale === "true";
         const matchesSearch = product.dataset.search.includes(query)
           || product.textContent.toLocaleLowerCase("de").includes(query);
-        const visible = matchesCategory && matchesSearch;
+        const visible = matchesCategory && matchesGroup && matchesSale && matchesSearch;
         product.hidden = !visible;
         if (visible) visibleCount += 1;
       });
       emptyState.hidden = visibleCount > 0;
+      productCount.textContent = `${visibleCount} ${visibleCount === 1 ? "Fundstück" : "Fundstücke"}`;
     }
 
-    document.getElementById("search-input").addEventListener("input", filterProducts);
-    filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        activeCategory = button.dataset.filter;
-        filterButtons.forEach((item) => {
-          const isActive = item === button;
-          item.classList.toggle("active", isActive);
-          item.setAttribute("aria-pressed", String(isActive));
-        });
-        filterProducts();
-      });
-    });
-
-    document.querySelectorAll("[data-category]").forEach((link) => {
-      link.addEventListener("click", () => {
-        const category = link.dataset.category;
-        const filterButton = filterButtons.find((button) => button.dataset.filter === category);
-        filterButton?.click();
-      });
-    });
-    document.querySelectorAll("[data-filter-link]").forEach((link) => {
-      link.addEventListener("click", () => {
-        const filterButton = filterButtons.find((button) => button.dataset.filter === link.dataset.filterLink);
-        filterButton?.click();
-        document.querySelector(".desktop-nav.open")?.classList.remove("open");
-      });
-    });
-    document.querySelector("[data-clear-filter]").addEventListener("click", () => {
-      filterButtons[0].click();
-    });
-
+    searchInput.addEventListener("input", filterProducts);
     document.getElementById("sort-select").addEventListener("change", (event) => {
       const direction = event.currentTarget.value;
       const sorted = [...products];
       if (direction === "price-low") sorted.sort((a, b) => Number(a.dataset.price) - Number(b.dataset.price));
       if (direction === "price-high") sorted.sort((a, b) => Number(b.dataset.price) - Number(a.dataset.price));
-      sorted.forEach((product) => productList.insertBefore(product, emptyState));
+      sorted.forEach((product) => productList.append(product));
     });
 
     document.querySelectorAll(".add-button").forEach((button) => {
@@ -394,11 +376,6 @@
         showToast(isActive ? "Auf deiner Merkliste gespeichert." : "Von der Merkliste entfernt.");
       });
     });
-    document.getElementById("newsletter-form").addEventListener("submit", (event) => {
-      event.preventDefault();
-      showToast("Danke fürs Anmelden – bald gibt es Post aus unserem Kleiderschrank.");
-      event.currentTarget.reset();
-    });
 
     const menuToggle = document.getElementById("menu-toggle");
     const navigation = document.querySelector(".desktop-nav");
@@ -414,6 +391,8 @@
         menuToggle.setAttribute("aria-label", "Menü öffnen");
       });
     });
+    window.addEventListener("hashchange", updatePage);
+    updatePage();
   </script>
 </body>
 </html>
